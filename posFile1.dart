@@ -49,7 +49,8 @@ class PointOfSalesApp {
       viewProducts();
       print("Enter the index of the product you want to update:");
       int index = int.parse(stdin.readLineSync()!);
-      if (index >= 0 && index < inventory.length) {
+      index = index - 1;
+      if (index >= 0 && index <= inventory.length) {
         print("Enter updated product name:");
         inventory[index].name = stdin.readLineSync()!;
         print("Enter updated product price:");
