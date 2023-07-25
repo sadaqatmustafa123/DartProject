@@ -72,6 +72,7 @@ class PointOfSalesApp {
       viewProducts();
       print("Enter the index of the product you want to delete:");
       int index = int.parse(stdin.readLineSync()!);
+      index = index - 1;
       if (index >= 0 && index < inventory.length) {
         inventory.removeAt(index);
         print("\nProduct deleted successfully!\n");
